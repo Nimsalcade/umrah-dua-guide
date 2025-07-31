@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     setupNavigation();
     setupStepNavigation();
+    setupGuideStepNavigation();
     setupKeyboardShortcuts();
     
     // Show the default section
@@ -69,7 +70,7 @@ function showSection(sectionName) {
 
 // Step navigation for Umrah section
 function setupStepNavigation() {
-    const steps = document.querySelectorAll('.step');
+    const steps = document.querySelectorAll('#umrah .step');
     steps.forEach((step, index) => {
         step.addEventListener('click', function() {
             const stepNumber = parseInt(this.getAttribute('data-step'));
@@ -78,10 +79,22 @@ function setupStepNavigation() {
     });
 }
 
+// Step navigation for Step-by-Step guide section
+function setupGuideStepNavigation() {
+    const steps = document.querySelectorAll('#step-by-step .step-indicator .step');
+    steps.forEach((step, index) => {
+        step.addEventListener('click', function() {
+            const stepNumber = parseInt(this.getAttribute('data-step'));
+            currentGuideStep = stepNumber;
+            updateGuideStep();
+        });
+    });
+}
+
 // Show specific step in Umrah section
 function showStep(stepNumber) {
-    // Update step indicator
-    const steps = document.querySelectorAll('.step');
+    // Update step indicator - target umrah section specifically
+    const steps = document.querySelectorAll('#umrah .step');
     steps.forEach((step, index) => {
         step.classList.remove('active', 'completed');
         const stepNum = index + 1;
@@ -94,23 +107,25 @@ function showStep(stepNumber) {
     });
     
     // Show corresponding step content
-    const stepContents = document.querySelectorAll('.umrah-step');
+    const stepContents = document.querySelectorAll('#umrah .umrah-step');
     stepContents.forEach(content => {
         content.classList.remove('active');
     });
     
-    const targetStep = document.querySelector(`.umrah-step[data-step="${stepNumber}"]`);
+    const targetStep = document.querySelector(`#umrah .umrah-step[data-step="${stepNumber}"]`);
     if (targetStep) {
         targetStep.classList.add('active');
     }
     
     // Update step controls
-    const prevBtn = document.querySelector('.step-btn[onclick="previousStep()"]');
-    const nextBtn = document.querySelector('.step-btn[onclick="nextStep()"]');
+    const prevBtn = document.querySelector('#umrah .step-btn[onclick="previousStep()"]');
+    const nextBtn = document.querySelector('#umrah .step-btn[onclick="nextStep()"]');
     
-    prevBtn.disabled = stepNumber === 1;
-    nextBtn.disabled = stepNumber === 5;
-    nextBtn.textContent = stepNumber === 5 ? 'Complete' : 'Next';
+    if (prevBtn) prevBtn.disabled = stepNumber === 1;
+    if (nextBtn) {
+        nextBtn.disabled = stepNumber === 5;
+        nextBtn.textContent = stepNumber === 5 ? 'Complete' : 'Next';
+    }
     
     currentStep = stepNumber;
 }
@@ -148,8 +163,8 @@ function previousStepGuide() {
 }
 
 function updateGuideStep() {
-    // Update step indicators
-    const steps = document.querySelectorAll('.umrah-step-guide .step');
+    // Update step indicators - fix the selector to target step-by-step section specifically
+    const steps = document.querySelectorAll('#step-by-step .step-indicator .step');
     steps.forEach((step, index) => {
         step.classList.remove('active', 'completed');
         const stepNum = index + 1;
@@ -172,9 +187,9 @@ function updateGuideStep() {
         targetStep.classList.add('active');
     }
     
-    // Update navigation buttons
-    const prevBtn = document.querySelector('.step-controls .step-btn[onclick="previousStepGuide()"]');
-    const nextBtn = document.querySelector('.step-controls .step-btn[onclick="nextStepGuide()"]');
+    // Update navigation buttons - fix the selector to target step-by-step section specifically
+    const prevBtn = document.querySelector('#step-by-step .step-controls .step-btn[onclick="previousStepGuide()"]');
+    const nextBtn = document.querySelector('#step-by-step .step-controls .step-btn[onclick="nextStepGuide()"]');
     
     if (prevBtn) {
         prevBtn.disabled = currentGuideStep === 1;
