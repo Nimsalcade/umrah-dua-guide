@@ -1,6 +1,9 @@
 // Global variables
 let currentSection = 'journey';
 let currentStep = 1;
+let currentGuideStep = 1;
+const totalSteps = 5;
+const totalGuideSteps = 7;
 let bookmarkedDuas = JSON.parse(localStorage.getItem('bookmarkedDuas')) || [];
 let customDuas = JSON.parse(localStorage.getItem('customDuas')) || [];
 
@@ -55,6 +58,12 @@ function showSection(sectionName) {
     // Reset to first step when switching to Umrah section
     if (sectionName === 'umrah') {
         showStep(1);
+    }
+    
+    // Reset to first guide step when switching to step-by-step section
+    if (sectionName === 'step-by-step') {
+        currentGuideStep = 1;
+        updateGuideStep();
     }
 }
 
@@ -120,6 +129,64 @@ function nextStep() {
     } else {
         // Show completion message
         showCompletionMessage();
+    }
+}
+
+// Step-by-step guide navigation functions
+function nextStepGuide() {
+    if (currentGuideStep < totalGuideSteps) {
+        currentGuideStep++;
+        updateGuideStep();
+    }
+}
+
+function previousStepGuide() {
+    if (currentGuideStep > 1) {
+        currentGuideStep--;
+        updateGuideStep();
+    }
+}
+
+function updateGuideStep() {
+    // Update step indicators
+    const steps = document.querySelectorAll('.umrah-step-guide .step');
+    steps.forEach((step, index) => {
+        step.classList.remove('active', 'completed');
+        const stepNum = index + 1;
+        
+        if (stepNum === currentGuideStep) {
+            step.classList.add('active');
+        } else if (stepNum < currentGuideStep) {
+            step.classList.add('completed');
+        }
+    });
+    
+    // Update step content
+    const stepContents = document.querySelectorAll('.guide-step');
+    stepContents.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    const targetStep = document.querySelector(`.guide-step[data-step="${currentGuideStep}"]`);
+    if (targetStep) {
+        targetStep.classList.add('active');
+    }
+    
+    // Update navigation buttons
+    const prevBtn = document.querySelector('.step-controls .step-btn[onclick="previousStepGuide()"]');
+    const nextBtn = document.querySelector('.step-controls .step-btn[onclick="nextStepGuide()"]');
+    
+    if (prevBtn) {
+        prevBtn.disabled = currentGuideStep === 1;
+    }
+    
+    if (nextBtn) {
+        if (currentGuideStep === totalGuideSteps) {
+            nextBtn.innerHTML = '<i class="fas fa-check"></i> Complete';
+        } else {
+            nextBtn.innerHTML = 'Next <i class="fas fa-chevron-right"></i>';
+        }
+        nextBtn.disabled = false;
     }
 }
 

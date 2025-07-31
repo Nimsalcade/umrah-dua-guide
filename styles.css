@@ -723,3 +723,210 @@ body {
         font-size: 1.2rem;
     }
 } 
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid #e2e8f0;
+        z-index: 100;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem;
+    }
+    
+    .nav-btn {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        min-width: auto;
+    }
+    
+    .nav-btn i {
+        font-size: 1rem;
+    }
+    
+    .main-content {
+        padding-bottom: 6rem;
+    }
+    
+    .step-indicator {
+        gap: 0.5rem;
+    }
+    
+    .step {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.875rem;
+    }
+    
+    .dua-card {
+        padding: 1rem;
+    }
+    
+    .dua-arabic {
+        font-size: 1.25rem;
+    }
+    
+    .step-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .step-btn {
+        width: 100%;
+    }
+}
+
+/* Step-by-step guide styles */
+.guide-step {
+    display: none;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.guide-step.active {
+    display: block;
+}
+
+.step-subsection {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+}
+
+.step-subsection h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.step-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.step-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+.step-checklist input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: #4299e1;
+    cursor: pointer;
+}
+
+.step-info {
+    background: #e6fffa;
+    border: 1px solid #81e6d9;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #234e52;
+}
+
+.step-info p {
+    margin-bottom: 0.5rem;
+}
+
+.step-info ul, .step-info ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.step-info li {
+    margin-bottom: 0.25rem;
+}
+
+.important-note {
+    background: linear-gradient(135deg, #fed7e2 0%, #fbb6ce 100%);
+    border: 1px solid #f687b3;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #702459;
+}
+
+.important-note p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.completion-message {
+    background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+    border: 1px solid #68d391;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: #22543d;
+}
+
+.completion-message p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.completion-message ul {
+    text-align: left;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.final-duas {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.final-duas h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Mobile responsive for step-by-step guide */
+@media (max-width: 768px) {
+    .guide-step {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-subsection {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .step-checklist label {
+        font-size: 0.9rem;
+    }
+    
+    .important-note, .step-info {
+        padding: 0.75rem;
+    }
+    
+    .completion-message {
+        padding: 1.5rem;
+    }
+} 
