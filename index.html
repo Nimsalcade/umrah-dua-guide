@@ -143,7 +143,7 @@
             <section id="umrah" class="content-section">
                 <div class="section-header">
                     <h2><i class="fas fa-kaaba"></i> Duas During Umrah</h2>
-                    <p>Essential prayers for your pilgrimage</p>
+                    <p>Essential prayers for your pilgrimage - ALL duas included</p>
                     <button class="btn-add-dua" onclick="openAddDuaModal()">
                         <i class="fas fa-plus"></i> Add New Dua
                     </button>
@@ -168,9 +168,9 @@
                 </div>
 
                 <div class="umrah-duas" id="umrah-duas-container">
-                    <!-- Step 1: Essential Duas & Dhikr -->
+                    <!-- Step 1: First Set of Duas -->
                     <div class="umrah-step active" data-step="1">
-                        <h3><i class="fas fa-pray"></i> Essential Duas & Dhikr</h3>
+                        <h3><i class="fas fa-pray"></i> Essential Duas (Part 1)</h3>
                         <div class="duas-grid" id="custom-duas-container">
                             <div class="dua-card">
                                 <div class="dua-arabic" dir="rtl">اللهم اني اسألك بانك أنت الله الواحد الأحد الفرد الصمد الذي لم يلد ولم يولد ولم يكن له كفوا أحد ان تغفر لي فانك انت الغفور الرحيم</div>
@@ -219,7 +219,93 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَا إِلَهَ إِلَّا أَنْتَ الْمَنَّانُ بَدِيعُ السَّمَاوَاتِ وَالْأَرْضِ، يَا ذَا الْجَلَالِ وَالْإِكْرَامِ، يَا حَيُّ يَا قَيُّومُ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَا إِلَهَ إِلَّا أَنْتَ الْمَنَّانُ بَدِيعُ السَّمَاوَاتِ وَالْأَرْضِ، يَا ذَا الْجَلَالِ وَالْإِكْرَامِ، يَا حَيُّ يَا قَيُّومُ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَسِّرْ أَمْرِي وَسَهِّلْ وَاقْضِ حَاجَتِي يَا رَبَّ الْعَالَمِينَ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">نَجِّحْنِي وَفَرِّحْنِي يَا اللهُ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ أَنْتَ تَعْلَمُ مَا فِي قَلْبِي.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ أَدْخِلِ السُّرُورَ فِي قَلْبِي وَأَنْزِلِ السَّكِينَةَ فِي قَلْبِي.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ ارْزُقْنِي الْمُعَدَّلَ الَّذِي أُرِيدُهُ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَا رَبِّ يَا رَبِّ يَا رَبِّ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللهُمّ أَصْلِحْلِي دِينِي الّذِي هُوَعِصْمَةُأَمْرِي، وَأَصْلِحْلِي دُنْيَايَالّتِي فِيهَا مَعَاشِي، وَأَصْلِحْلِي آخِرَتِي الّتِي فِيهَا مَعَادِي، وَاجْعَلِ الْحَيَاةَزِيَادَةً لِي فِي كُلِّ خَيْرٍ، وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْكُلِّ شَرٍّ</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللهم مالك الملك تؤتي الملك من تشاء وتنزع الملك من تشاء وتعز من تشاء وتذل من تشاء بيدك الخير إنك على كل شيء قدير، رحمن الدنيا والآخرة ورحيمهما تعطيهما من تشاء وتمنع منهما من تشاء ارحمني رحمة تغنيني بها عمن سواك"</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Second Set of Duas -->
+                    <div class="umrah-step" data-step="2">
+                        <h3><i class="fas fa-compass"></i> Essential Duas (Part 2)</h3>
+                        <div class="duas-grid">
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -259,68 +345,6 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Seeking Guidance & Success -->
-                    <div class="umrah-step" data-step="2">
-                        <h3><i class="fas fa-compass"></i> Seeking Guidance & Success</h3>
-                        <div class="duas-grid">
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَسِّرْ أَمْرِي وَسَهِّلْ وَاقْضِ حَاجَتِي يَا رَبَّ الْعَالَمِينَ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">نَجِّحْنِي وَفَرِّحْنِي يَا اللهُ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ أَنْتَ تَعْلَمُ مَا فِي قَلْبِي</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ أَدْخِلِ السُّرُورَ فِي قَلْبِي وَأَنْزِلِ السَّكِينَةَ فِي قَلْبِي</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ ارْزُقْنِي الْمُعَدَّلَ الَّذِي أُرِيدُهُ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَا رَبِّ يَا رَبِّ يَا رَبِّ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
                                 <div class="dua-arabic" dir="rtl">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
@@ -338,52 +362,6 @@
 
                             <div class="dua-card">
                                 <div class="dua-arabic" dir="rtl">وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ دُلَّنِي وَوَجِّهْنِي، يَا رَبِّ ارْحَمْنِي وَقَوِّنِي بِكَ، وَاغْفِرْ لِي زَلَّاتِي وَهَفَوَاتِي</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ سَخِّرْ لِي مَنْ فِي السَّمَاءِ وَمَنْ هُمْ عَلَى الْأَرْضِ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Comprehensive Life Duas -->
-                    <div class="umrah-step" data-step="3">
-                        <h3><i class="fas fa-hands"></i> Comprehensive Life Duas</h3>
-                        <div class="duas-grid">
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهُمّ أَصْلِحْلِي دِينِي الّذِي هُوَعِصْمَةُأَمْرِي، وَأَصْلِحْلِي دُنْيَايَالّتِي فِيهَا مَعَاشِي، وَأَصْلِحْلِي آخِرَتِي الّتِي فِيهَا مَعَادِي، وَاجْعَلِ الْحَيَاةَزِيَادَةً لِي فِي كُلِّ خَيْرٍ، وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْكُلِّ شَرٍّ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهم مالك الملك تؤتي الملك من تشاء وتنزع الملك من تشاء وتعز من تشاء وتذل من تشاء بيدك الخير إنك على كل شيء قدير، رحمن الدنيا والآخرة ورحيمهما تعطيهما من تشاء وتمنع منهما من تشاء ارحمني رحمة تغنيني بها عمن سواك</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -415,31 +393,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ أكْثِرْ مَالِي، وَوَلَدِي، وَبَارِكْ لِي فِيمَا أعْطَيْتَنِي وَأطِلْ حَيَاتِي عَلَى طَاعَتِكَ، وَأحْسِنْ عَمَلِي وَاغْفِرْ لِي</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ هَبْ لِي مُلْكًا وَجَاهًا، وَهَبْ لِي مَالًا وَافِرًا، وَهَبْ لِي تَسْخِيرًا، وَهَبْ لِي عَوْنًا وَقُوَّةً، وَهَبْ لِي سَعَادَةً وَمَا تَمَنَّيْتُ، وَسَخِّرْ لِي الْأَسْبَابَ وَالْأَشْخَاصَ وَالْأَمَاكِنَ، وَلَا تَجْعَلْنِي ضَائِعًا لَا أَمْلِكُ جِهَةً وَلَا بُوصْلَةً</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهم اكفني بحلالِك عن حرامِكَ، واغْنِني بفضلِكَ عمن سِواك</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهم إني اسألك من فضلك و رحمتك فإنه لا يملكها إلا انت</div>
+                                <div class="dua-arabic" dir="rtl">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -448,42 +402,10 @@
                         </div>
                     </div>
 
-                    <!-- Step 4: Peace, Protection & Healing -->
-                    <div class="umrah-step" data-step="4">
-                        <h3><i class="fas fa-shield-alt"></i> Peace, Protection & Healing</h3>
+                    <!-- Step 3: Third Set of Duas -->
+                    <div class="umrah-step" data-step="3">
+                        <h3><i class="fas fa-hands"></i> Essential Duas (Part 3)</h3>
                         <div class="duas-grid">
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَا مَنَّانُ يَا وَاسِعُ، أَنْتَ الْكَرِيمُ الْوَهَّابُ، ارْزُقْنِي أَيَّامًا طَيِّبَةً أَعِيشُ فِيهَا بِقَلْبٍ آمِنٍ وَرُوحٍ هَادِئَةٍ وَنَفْسٍ سَاكِنَةٍ، لَا يَمْلَؤُنِي الْقَلَقُ وَلَا يُؤَرِّقُنِي الْخَوْفُ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهم إني أعوذ بك من الهم والحزن والعجز والكسل وأعوذ بك من غلبه الدين وقهر الرجال صباحاً ومساء ًكل يوم</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إنِّي أَعُوذُبِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ. وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</div>
-                                <div class="dua-controls">
-                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
-                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
-                                </div>
-                            </div>
-
                             <div class="dua-card">
                                 <div class="dua-arabic" dir="rtl">اللَّهُمَّ فَاطِرَ السَّمَاوَاتِ وَالأَرْضِ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ أَنْتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِيمَا كَانُوا فِيهِ يَخْتَلِفُونَ</div>
                                 <div class="dua-controls">
@@ -493,7 +415,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">رَبِّ أَوۡزِعۡنِیۤ أَنۡ أَشۡكُرَ نِعۡمَتَكَ ٱلَّتِیۤ أَنۡعَمۡتَ عَلَیَّ وَعَلَىٰ وَ ٰ⁠لِدَیَّ وَأَنۡ أَعۡمَلَ صَـٰلِحࣰا تَرۡضَىٰهُ وَأَصۡلِحۡ لِی فِی ذُرِّیَّتِیۤۖ إِنِّی تُبۡتُ إِلَیۡكَ وَإِنِّی مِنَ ٱلۡمُسۡلِمِینَ</div>
+                                <div class="dua-arabic" dir="rtl">رَبِّ أَوۡزِعۡنِیۤ أَنۡ أَشۡكُرَ نِعۡمَتَكَ ٱلَّتِیۤ أَنۡعَمۡتَ عَلَیَّ وَعَلَىٰ وَ ٰ⁠لِدَیَّ وَأَنۡ أَعۡمَلَ صَـٰلِحࣰا تَرۡضَىٰهُ وَأَصۡلِحۡ لِی فِی ذُرِّیَّتِیۤۖ إِنِّی تُبۡتُ إِلَیۡكَ وَإِنِّی مِنَ ٱلۡمُسۡلِمِینَ﴿ ١٥ ﴾</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -509,7 +431,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">فَاطِرَ ٱلسَّمَـٰوَ ٰ⁠تِ وَٱلۡأَرۡضِ أَنتَ وَلِیِّۦ فِی ٱلدُّنۡیَا وَٱلۡـَٔاخِرَةِۖ تَوَفَّنِی مُسۡلِمࣰا وَأَلۡحِقۡنِی بِٱلصَّـٰلِحِینَ</div>
+                                <div class="dua-arabic" dir="rtl">فَاطِرَ ٱلسَّمَـٰوَ ٰ⁠تِ وَٱلۡأَرۡضِ أَنتَ وَلِیِّۦ فِی ٱلدُّنۡیَا وَٱلۡـَٔاخِرَةِۖ تَوَفَّنِی مُسۡلِمࣰا وَأَلۡحِقۡنِی بِٱلصَّـٰلِحِینَ﴿ ١٠١ ﴾</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -517,7 +439,63 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللهم اشف الأجساد المتعبة التي لا يعلم بحجم ألمها سواك يارب اجعل العافية والراحة تسري في عروق كل مريض</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ أكْثِرْ مَالِي، وَوَلَدِي، وَبَارِكْ لِي فِيمَا أعْطَيْتَنِي "3"وَأطِلْ حَيَاتِي عَلَى طَاعَتِكَ، وَأحْسِنْ عَمَلِي وَاغْفِرْ لِي</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ هَبْ لِي مُلْكًا وَجَاهًا، وَهَبْ لِي مَالًا وَافِرًا، وَهَبْ لِي تَسْخِيرًا، وَهَبْ لِي عَوْنًا وَقُوَّةً، وَهَبْ لِي سَعَادَةً وَمَا تَمَنَّيْتُ، وَسَخِّرْ لِي الْأَسْبَابَ وَالْأَشْخَاصَ وَالْأَمَاكِنَ، وَلَا تَجْعَلْنِي ضَائِعًا لَا أَمْلِكُ جِهَةً وَلَا بُوصْلَةً.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ دُلَّنِي وَوَجِّهْنِي، يَا رَبِّ ارْحَمْنِي وَقَوِّنِي بِكَ، وَاغْفِرْ لِي زَلَّاتِي وَهَفَوَاتِي.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ سَخِّرْ لِي مَنْ فِي السَّمَاءِ وَمَنْ هُمْ عَلَى الْأَرْضِ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">يَا رَبِّ يَا مَنَّانُ يَا وَاسِعُ، أَنْتَ الْكَرِيمُ الْوَهَّابُ، ارْزُقْنِي أَيَّامًا طَيِّبَةً أَعِيشُ فِيهَا بِقَلْبٍ آمِنٍ وَرُوحٍ هَادِئَةٍ وَنَفْسٍ سَاكِنَةٍ، لَا يَمْلَؤُنِي الْقَلَقُ وَلَا يُؤَرِّقُنِي الْخَوْفُ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللهم إني أعوذ بك من الهم والحزن والعجز والكسل وأعوذ بك من غلبه الدين وقهر الرجال صباحاً ومساء ًكل يوم</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إنِّي أَعُوذُبِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ. وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللهم اكفني بحلالِك عن حرامِكَ، واغْنِني بفضلِكَ عمن سِواك</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -526,12 +504,12 @@
                         </div>
                     </div>
 
-                    <!-- Step 5: Comprehensive Final Duas -->
-                    <div class="umrah-step" data-step="5">
-                        <h3><i class="fas fa-star"></i> Comprehensive Final Duas</h3>
+                    <!-- Step 4: Fourth Set of Duas -->
+                    <div class="umrah-step" data-step="4">
+                        <h3><i class="fas fa-shield-alt"></i> Essential Duas (Part 4)</h3>
                         <div class="duas-grid">
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَكَ الْحَمْدُ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ، كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ، يَا اللهُ، يَا رَحْمَانُ، يَا رَحِيمُ، يَا غَفُورُ، يَا كَرِيمُ، يَا حَلِيمُ، يَا عَظِيمُ، يَا مَنْ وَسِعَتْ رَحْمَتُهُ كُلَّ شَيْءٍ، يَا مَنْ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، يَا وَدُودُ، يَا ذَا الْعَرْشِ الْمَجِيدِ، يَا فَعَّالًا لِمَا يُرِيدُ</div>
+                                <div class="dua-arabic" dir="rtl">اللهم إني اسألك من فضلك و رحمتك فإنه لا يملكها إلا انت</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -539,7 +517,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">نَسْأَلُكَ بِنُورِ وَجْهِكَ الَّذِي أَشْرَقَتْ لَهُ السَّمَاوَاتُ وَالْأَرْضُ، وَبِقُدْرَتِكَ الَّتِي قَدَرْتَ بِهَا عَلَى جَمِيعِ خَلْقِكَ، وَبِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ، أَنْ تَغْفِرَ لَنَا وَتَرْحَمَنَا وَتُعْتِقَ رِقَابَنَا مِنَ النَّارِ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَكَ الْحَمْدُ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ، كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ، يَا اللهُ، يَا رَحْمَانُ، يَا رَحِيمُ، يَا غَفُورُ، يَا كَرِيمُ، يَا حَلِيمُ، يَا عَظِيمُ، يَا مَنْ وَسِعَتْ رَحْمَتُهُ كُلَّ شَيْءٍ، يَا مَنْ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، يَا وَدُودُ، يَا ذَا الْعَرْشِ الْمَجِيدِ، يَا فَعَّالًا لِمَا يُرِيدُ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -547,7 +525,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ نَسْأَلُكَ إِيمَانًا لَا يَرْتَدُّ، وَيَقِينًا لَا يَنْفَدُ، وَقَلْبًا خَاشِعًا، وَلِسَانًا ذَاكِرًا، وَعَمَلًا مُتَقَبَّلًا، وَرِزْقًا وَاسِعًا، وَعَفْوًا شَامِلًا، وَشِفَاءً مِنْ كُلِّ دَاءٍ، وَفَرَجًا لِكُلِّ هَمٍّ، وَكَشْفًا لِكُلِّ كَرْبٍ، وَتَوْبَةً نَصُوحًا قَبْلَ الْمَوْتِ، وَشَهَادَةً عِنْدَ الْمَوْتِ، وَجَنَّةً وَرِضْوَانًا بَعْدَ الْمَوْتِ</div>
+                                <div class="dua-arabic" dir="rtl">نَسْأَلُكَ بِنُورِ وَجْهِكَ الَّذِي أَشْرَقَتْ لَهُ السَّمَاوَاتُ وَالْأَرْضُ، وَبِقُدْرَتِكَ الَّتِي قَدَرْتَ بِهَا عَلَى جَمِيعِ خَلْقِكَ، وَبِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ، أَنْ تَغْفِرَ لَنَا وَتَرْحَمَنَا وَتُعْتِقَ رِقَابَنَا مِنَ النَّارِ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -555,7 +533,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَا تَدَعْ لَنَا ذَنْبًا إِلَّا غَفَرْتَهُ، وَلَا هَمًّا إِلَّا فَرَّجْتَهُ، وَلَا دَيْنًا إِلَّا قَضَيْتَهُ، وَلَا مَرِيضًا إِلَّا شَفَيْتَهُ، وَلَا مَيِّتًا إِلَّا رَحِمْتَهُ، وَلَا تَائِبًا إِلَّا قَبِلْتَهُ، وَلَا ضَالًّا إِلَّا هَدَيْتَهُ، وَلَا عَسِيرًا إِلَّا يَسَّرْتَهُ، وَلَا حَاجَةَ مِنْ حَوَائِجِ الدُّنْيَا وَالْآخِرَةِ هِيَ لَكَ رِضًى وَلَنَا فِيهَا صَلَاحٌ إِلَّا قَضَيْتَهَا وَيَسَّرْتَهَا بِفَضْلِكَ يَا أَرْحَمَ الرَّاحِمِينَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ نَسْأَلُكَ إِيمَانًا لَا يَرْتَدُّ، وَيَقِينًا لَا يَنْفَدُ، وَقَلْبًا خَاشِعًا، وَلِسَانًا ذَاكِرًا، وَعَمَلًا مُتَقَبَّلًا، وَرِزْقًا وَاسِعًا، وَعَفْوًا شَامِلًا، وَشِفَاءً مِنْ كُلِّ دَاءٍ، وَفَرَجًا لِكُلِّ هَمٍّ، وَكَشْفًا لِكُلِّ كَرْبٍ، وَتَوْبَةً نَصُوحًا قَبْلَ الْمَوْتِ، وَشَهَادَةً عِنْدَ الْمَوْتِ، وَجَنَّةً وَرِضْوَانًا بَعْدَ الْمَوْتِ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -563,7 +541,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إِنَّا نَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْنَا مِنْهُ وَمَا لَمْ نَعْلَمْ، وَنَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْنَا مِنْهُ وَمَا لَمْ نَعْلَمْ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ لَا تَدَعْ لَنَا ذَنْبًا إِلَّا غَفَرْتَهُ، وَلَا هَمًّا إِلَّا فَرَّجْتَهُ، وَلَا دَيْنًا إِلَّا قَضَيْتَهُ، وَلَا مَرِيضًا إِلَّا شَفَيْتَهُ، وَلَا مَيِّتًا إِلَّا رَحِمْتَهُ، وَلَا تَائِبًا إِلَّا قَبِلْتَهُ، وَلَا ضَالًّا إِلَّا هَدَيْتَهُ، وَلَا عَسِيرًا إِلَّا يَسَّرْتَهُ، وَلَا حَاجَةَ مِنْ حَوَائِجِ الدُّنْيَا وَالْآخِرَةِ هِيَ لَكَ رِضًى وَلَنَا فِيهَا صَلَاحٌ إِلَّا قَضَيْتَهَا وَيَسَّرْتَهَا بِفَضْلِكَ يَا أَرْحَمَ الرَّاحِمِينَ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -571,7 +549,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْنَا مِنْ عُتَقَائِكَ مِنَ النَّارِ، وَاجْعَلْنَا مِمَّنْ نَظَرْتَ إِلَيْهِمْ فَرَحِمْتَهُمْ وَغَفَرْتَ لَهُمْ وَرَضِيتَ عَنْهُمْ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إِنَّا نَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْنَا مِنْهُ وَمَا لَمْ نَعْلَمْ، وَنَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْنَا مِنْهُ وَمَا لَمْ نَعْلَمْ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -579,7 +557,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ لَنَا مِنْ كُلِّ هَمٍّ فَرَجًا، وَمِنْ كُلِّ ضِيقٍ مَخْرَجًا، وَمِنْ كُلِّ بَلَاءٍ عَافِيَةً، وَمِنْ كُلِّ فَاحِشَةٍ سِتْرًا، وَمِنْ كُلِّ ذَنْبٍ مَغْفِرَةً</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْنَا مِنْ عُتَقَائِكَ مِنَ النَّارِ، وَاجْعَلْنَا مِمَّنْ نَظَرْتَ إِلَيْهِمْ فَرَحِمْتَهُمْ وَغَفَرْتَ لَهُمْ وَرَضِيتَ عَنْهُمْ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -587,7 +565,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْبُرْ كَسْرَنَا، وَاغْسِلْ حُزْنَنَا، وَأَبْدِلْ ضَعْفَنَا قُوَّةً، وَفَقْرَنَا غِنًى، وَخَوْفَنَا أَمْنًا، وَضِيقَنَا سَعَةً، وَذُلَّنَا عِزَّةً</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ لَنَا مِنْ كُلِّ هَمٍّ فَرَجًا، وَمِنْ كُلِّ ضِيقٍ مَخْرَجًا، وَمِنْ كُلِّ بَلَاءٍ عَافِيَةً، وَمِنْ كُلِّ فَاحِشَةٍ سِتْرًا، وَمِنْ كُلِّ ذَنْبٍ مَغْفِرَةً.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -595,7 +573,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ ارْزُقْنَا لَذَّةَ مُنَاجَاتِكَ، وَحَلَاوَةَ ذِكْرِكَ، وَصِدْقَ التَّوَكُّلِ عَلَيْكَ، وَحُسْنَ الظَّنِّ بِكَ، وَالْيَقِينَ بِوَعْدِكَ، وَالثَّبَاتَ عَلَى أَمْرِكَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْبُرْ كَسْرَنَا، وَاغْسِلْ حُزْنَنَا، وَأَبْدِلْ ضَعْفَنَا قُوَّةً، وَفَقْرَنَا غِنًى، وَخَوْفَنَا أَمْنًا، وَضِيقَنَا سَعَةً، وَذُلَّنَا عِزَّةً.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -603,7 +581,21 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ أَعْمَالَنَا فِي مِيزَانِ حَسَنَاتِنَا، وَأَقْوَالَنَا شَاهِدًا لَنَا لَا عَلَيْنَا، وَاحْشُرْنَا مَعَ النَّبِيِّينَ وَالصِّدِّيقِينَ وَالشُّهَدَاءِ وَالصَّالِحِينَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ ارْزُقْنَا لَذَّةَ مُنَاجَاتِكَ، وَحَلَاوَةَ ذِكْرِكَ، وَصِدْقَ التَّوَكُّلِ عَلَيْكَ، وَحُسْنَ الظَّنِّ بِكَ، وَالْيَقِينَ بِوَعْدِكَ، وَالثَّبَاتَ عَلَى أَمْرِكَ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Final Set of Duas -->
+                    <div class="umrah-step" data-step="5">
+                        <h3><i class="fas fa-star"></i> Final Duas</h3>
+                        <div class="duas-grid">
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ أَعْمَالَنَا فِي مِيزَانِ حَسَنَاتِنَا، وَأَقْوَالَنَا شَاهِدًا لَنَا لَا عَلَيْنَا، وَاحْشُرْنَا مَعَ النَّبِيِّينَ وَالصِّدِّيقِينَ وَالشُّهَدَاءِ وَالصَّالِحِينَ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -611,7 +603,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، اللَّهُمَّ بَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ أَجْمَعِينَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، اللَّهُمَّ بَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ أَجْمَعِينَ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -619,7 +611,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ هَذَا الدُّعَاءَ حُجَّةً لَنَا لَا عَلَيْنَا، وَبَلِّغْنَا بِهِ أَعْلَى الْجِنَانِ، وَاغْفِرْ لِكَاتِبِهِ وَقَارِئِهِ وَنَاشِرِهِ وَلِمَنْ قَالَ آمِينَ، اللَّهُمَّ آمِينَ يَا أَرْحَمَ الرَّاحِمِينَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ اجْعَلْ هَذَا الدُّعَاءَ حُجَّةً لَنَا لَا عَلَيْنَا، وَبَلِّغْنَا بِهِ أَعْلَى الْجِنَانِ، وَاغْفِرْ لِكَاتِبِهِ وَقَارِئِهِ وَنَاشِرِهِ وَلِمَنْ قَالَ آمِينَ، اللَّهُمَّ آمِينَ يَا أَرْحَمَ الرَّاحِمِينَ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -627,7 +619,7 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ بِهِ مُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَأَسْتَعِيذُ بِكَ مِنْ شَرِّ مَا اسْتَعَاذَ بِهِ مُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَآلِ مُحَمَّدٍ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ بِهِ مُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَأَسْتَعِيذُ بِكَ مِنْ شَرِّ مَا اسْتَعَاذَ بِهِ مُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَآلِ مُحَمَّدٍ.</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
@@ -635,7 +627,15 @@
                             </div>
 
                             <div class="dua-card">
-                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ ارْزُقْ كَاتِبَ وَنَاقِلَ وَقَارِئَ الرِّسَالَةِ، اللَّهُمَّ آمِينَ</div>
+                                <div class="dua-arabic" dir="rtl">اللَّهُمَّ ارْزُقْ كَاتِبَ وَنَاقِلَ وَقَارِئَ الرِّسَالَةِ، اللَّهُمَّ آمِينَ.</div>
+                                <div class="dua-controls">
+                                    <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
+                                    <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dua-card">
+                                <div class="dua-arabic" dir="rtl">اللهم اشف الأجساد المتعبة التي لا يعلم بحجم ألمها سواك يارب اجعل العافية والراحة تسري في عروق كل مريض</div>
                                 <div class="dua-controls">
                                     <button class="btn-play" onclick="playAudio(this)"><i class="fas fa-play"></i></button>
                                     <button class="btn-bookmark" onclick="toggleBookmark(this)"><i class="far fa-bookmark"></i></button>
